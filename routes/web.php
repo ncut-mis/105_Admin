@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// 後台
+// 後台 公告管理
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
@@ -26,4 +26,17 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('posts',          ['as' => 'admin.posts.store', 'uses' => 'AdminPostsController@store']);
     Route::patch('posts/{id}',    ['as' => 'admin.posts.update', 'uses' => 'AdminPostsController@update']);
     Route::delete('posts/{id}',    ['as' => 'admin.posts.destroy', 'uses' => 'AdminPostsController@destroy']);
+
+ //.............................................................................................................
+
+ //病患帳戶管理
+    Route::get('users'          , ['as' => 'admin.users.index' , 'uses' => 'AdminUsersController@index']);
+    Route::get('users/create'   , ['as' => 'admin.users.create', 'uses' => 'AdminUsersController@create']);
+    Route::get('users/{id}/edit', ['as' => 'admin.users.edit'  , 'uses' => 'AdminUsersController@edit']);
+
+    Route::post('users',          ['as' => 'admin.users.store', 'uses' => 'AdminUsersController@store']);
+    Route::patch('users/{id}',    ['as' => 'admin.users.update', 'uses' => 'AdminUsersController@update']);
+    Route::delete('users/{id}',    ['as' => 'admin.users.destroy', 'uses' => 'AdminUsersController@destroy']);
+
 });
+
