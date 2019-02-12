@@ -33,7 +33,6 @@
                     <tr>
                         <th width="30" style="text-align: center">#</th>
                         <th>標題</th>
-                        <th width="70" style="text-align: center">精選？</th>
                         <th width="100" style="text-align: center">功能</th>
                     </tr>
                 </thead>

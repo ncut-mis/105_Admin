@@ -37,13 +37,6 @@
                 <textarea name="content" class="form-control" rows="10"></textarea>
             </div>
 
-            <div class="form-group">
-                <label>精選？</label>
-                <select name="is_feature" class="form-control">
-                    <option value="0">否</option>
-                    <option value="1">是</option>
-                </select>
-            </div>
 
             <div class="text-right">
                 <button type="submit" class="btn btn-success">新增</button>

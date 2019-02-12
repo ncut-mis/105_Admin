@@ -38,15 +38,6 @@
                 <textarea name="content" class="form-control" rows="10">{{$post->content}}</textarea>
     </div>
 
-            <div class="form-group">
-                <label>精選？</label>
-                <select name="is_feature" class="form-control" >
-                    <option value="0" {{ $post->is_feature?'':'SELECTED' }}>否</option>
-                    <option value="1" {{ $post->is_feature?'SELECTED':'' }}>是</option>
-                </select>
-
-            </div>
-
             <div class="text-right">
                 <button type="submit" class="btn btn-success">更新</button>
             </div>
