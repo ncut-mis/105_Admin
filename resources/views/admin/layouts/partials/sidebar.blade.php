@@ -40,6 +40,9 @@
             <li>
                 <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i> 文章管理</a>
             </li>
+            <li>
+                <a href="{{ route('admin.users.index') }}"><i class="fa fa-fw fa-edit"></i> 使用者管理</a>
+            </li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
