@@ -41,7 +41,6 @@
                     <tr>
                         <td style="text-align: center">{{ $post->id }}</td>
                         <td>{{ $post->title }}</td>
-                        <td style="text-align: center">{{ $post->is_feature?'V':'X' }}</td>
                         <td>
                             <a href="{{ route('admin.posts.edit', $post->id) }}"> 編輯</a>
                             /
