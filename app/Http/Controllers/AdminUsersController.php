@@ -8,6 +8,7 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Staff;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class AdminUsersController extends Controller
 {
@@ -48,7 +49,7 @@ class AdminUsersController extends Controller
             'position_id' => 1,
             'name' => $request->clinic_admin,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' =>Hash::make($request->password),
         ]);
         return redirect()->route('admin.users.index');
     }
