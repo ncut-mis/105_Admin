@@ -30,10 +30,11 @@ class AdminUsersController extends Controller
         return view('admin.users.create',$data);
     }
 
-    public function edit($id)
+    public function edit($clinic,$staff)
     {
-        $user = User::find($id);
-        $data = ['users' => $user];
+        $user = Clinic::find($clinic);
+        $staff = Staff::find($staff);
+        $data = ['users' => $user,'staffs' => $staff];
 
         return view('admin.users.edit', $data);
     }
@@ -56,13 +57,13 @@ class AdminUsersController extends Controller
 
     public function destroy($id)
     {
-        User::destroy($id);
+        Clinic::destroy($id);
         return redirect()->route('admin.users.index');
     }
 
     public function update(UserRequest $request, $id)
     {
-        $user=User::find($id);
+        $user=Staff::find($id);
         $user->update($request->all());
         return redirect()->route('admin.users.index');
     }

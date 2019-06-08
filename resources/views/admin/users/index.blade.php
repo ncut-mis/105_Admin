@@ -31,9 +31,9 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th  style="text-align: center">診所編號</th>
+                        <th width="50" style="text-align: center">診所編號</th>
                         <th style="text-align: center">診所名稱</th>
-                        <th style="text-align: center">診所管理員姓名</th>
+                        <th width="100"style="text-align: center">診所管理員姓名</th>
                         <th style="text-align: center">信箱</th>
                         <th style="text-align: center">password</th>
                         <th width="100" style="text-align: center">功能</th>
@@ -52,11 +52,14 @@
                         <td style="text-align: center">{{ $staff->password }}</td>
 
                         <td style="text-align: center">
-                            <a href="{{ route('admin.users.edit', $user->id) }}"> 編輯</a>
-                            /
-                            <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
+                            <form action="/clinics/{{$clinic->id}}}/staff/{{$staff->id}}}/edit" method="POST">
                                 {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
+
+                                <button class="btn btn-link">修改</button></form>
+                                        /
+                                <form action="{{ route('admin.users.destroy', $clinic->id,$staff->id) }}" method="POST">
+                                  {{ csrf_field() }}
+                                  {{ method_field('DELETE') }}
                                 <button class="btn btn-link">刪除</button></form>
                         </td>
                     </tr>

@@ -31,7 +31,12 @@ class AdminPostsController extends Controller
 
     public function store(PostRequest $request)
     {
-        Post::create($request‐>all());
+
+        Post::create([
+            'title' => $request->title,
+            'content' => $request->contents,
+        ]);
+
         return redirect()->route('admin.posts.index');
     }
 

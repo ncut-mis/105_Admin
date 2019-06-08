@@ -25,14 +25,10 @@ class UserRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'birthday'=>'required',
             'phone'=>'required',
             'address'=>'required',
-            'contact_person' =>'required',
-            'cp_phone' =>'required',
             'email' =>'required',
             'password'=>'required | min: 6',
-            'email_verified_at',
 
         ];
     }

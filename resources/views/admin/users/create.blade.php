@@ -48,7 +48,7 @@
 
                 <div class="form-group">
                     <label>password：</label>
-                    <input name= "password" class="form-control"  placeholder="請輸入password">
+                    <input type="password" name= "password" class="form-control"  placeholder="請輸入password">
                 </div>
 
                 <div class="text-right">
