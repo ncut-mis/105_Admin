@@ -42,6 +42,7 @@ class AdminUsersController extends Controller
     public function store(Request $request)
     {
         Clinic::create([
+            'id'=>$request->clinic_no,
             'name' => $request->clinic_name,
         ]);
 

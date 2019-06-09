@@ -33,22 +33,22 @@
 
                 <div class="form-group">
                     <label>診所名稱：</label>
-                    <input name ='clinic_name'  class="form-control" placeholder="請輸入診所名稱">
+                    <input name ='clinic_name'  class="form-control" placeholder="請輸入診所名稱" required>
                 </div>
 
                 <div class="form-group">
                     <label>診所管理員姓名：</label>
-                    <input name="clinic_admin" class="form-control" placeholder="請輸入診所管理員姓名">
+                    <input name="clinic_admin" class="form-control" placeholder="請輸入診所管理員姓名" required>
                 </div>
 
                 <div class="form-group">
                     <label>email：</label>
-                    <input name="email" class="form-control" placeholder="請輸入email">
+                    <input name="email" class="form-control" placeholder="請輸入email" required>
                 </div>
 
                 <div class="form-group">
                     <label>password：</label>
-                    <input type="password" name= "password" class="form-control"  placeholder="請輸入password">
+                    <input type="password" name= "password" class="form-control"  placeholder="請輸入password" required>
                 </div>
 
                 <div class="text-right">
