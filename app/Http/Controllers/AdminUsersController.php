@@ -44,7 +44,7 @@ class AdminUsersController extends Controller
         Clinic::create([
             'name' => $request->clinic_name,
         ]);
-       $max_clinic=Clinic::orderBy('id','DESC')->get();
+       $max_clinic=Clinic::orderBy('id','DESC')->get()->first();
         Staff::create([
             'clinic_id' =>$max_clinic->id,
             'position_id' => 1,
