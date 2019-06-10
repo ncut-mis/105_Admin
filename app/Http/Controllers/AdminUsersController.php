@@ -42,12 +42,11 @@ class AdminUsersController extends Controller
     public function store(Request $request)
     {
         Clinic::create([
-            'id'=>$request->clinic_no,
             'name' => $request->clinic_name,
         ]);
-
+       $max_clinic=Clinic::orderBy('id','DESC')->get();
         Staff::create([
-            'clinic_id' =>$request->clinic_no,
+            'clinic_id' =>$max_clinic->id,
             'position_id' => 1,
             'name' => $request->clinic_admin,
             'email' => $request->email,
