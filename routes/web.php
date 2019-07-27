@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin'], function() {
 
     Route::post('users',          ['as' => 'admin.users.store', 'uses' => 'AdminUsersController@store']);
     Route::patch('users/{id}',    ['as' => 'admin.users.update', 'uses' => 'AdminUsersController@update']);
-    Route::delete('users/{id}',    ['as' => 'admin.users.destroy', 'uses' => 'AdminUsersController@destroy']);
+    Route::delete('users/{clinic}',    ['as' => 'admin.users.destroy', 'uses' => 'AdminUsersController@destroy']);
 
 });
 

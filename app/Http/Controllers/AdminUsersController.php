@@ -55,9 +55,11 @@ class AdminUsersController extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    public function destroy($id)
+    public function destroy(Clinic $clinic)
     {
-        Clinic::destroy($id);
+       $clinic->delete();
+       $staff = Staff::where('clinic_id',$clinic->id);
+       $staff->delete();
         return redirect()->route('admin.users.index');
     }
 
