@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin'], function() {
  //病患帳戶管理
     Route::get('users'          , ['as' => 'admin.users.index' , 'uses' => 'AdminUsersController@index']);
     Route::get('users/create'   , ['as' => 'admin.users.create', 'uses' => 'AdminUsersController@create']);
-    Route::get('users/{id}/edit', ['as' => 'admin.users.edit'  , 'uses' => 'AdminUsersController@edit']);
+    Route::get('clinics/{clinic}/staff/{staff}/edit', ['as' => 'admin.users.edit'  , 'uses' => 'AdminUsersController@edit']);
 
     Route::post('users',          ['as' => 'admin.users.store', 'uses' => 'AdminUsersController@store']);
     Route::patch('users/{id}',    ['as' => 'admin.users.update', 'uses' => 'AdminUsersController@update']);
