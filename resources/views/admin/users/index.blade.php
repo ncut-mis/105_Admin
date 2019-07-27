@@ -33,6 +33,7 @@
                     <tr>
                         <th width="50" style="text-align: center">診所編號</th>
                         <th style="text-align: center">診所名稱</th>
+                        <th style="text-align: center">診所科別</th>
                         <th width="100"style="text-align: center">診所管理員姓名</th>
                         <th style="text-align: center">信箱</th>
                         <th style="text-align: center">password</th>
@@ -47,6 +48,11 @@
                     <tr>
                         <td style="text-align: center">{{ $clinic->id }}</td>
                         <td style="text-align: center">{{ $clinic->name }}</td>
+                        @foreach($categories as $category)
+                            @if($category->id === $clinic->category_id)
+                        <td style="text-align: center">{{ $category->category}}</td>
+                            @endif
+                        @endforeach
                         <td style="text-align: center">{{ $staff->name }}</td>
                         <td style="text-align: center">{{ $staff->email}}</td>
                         <td style="text-align: center">{{ $staff->password }}</td>

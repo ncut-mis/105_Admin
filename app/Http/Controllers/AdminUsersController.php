@@ -19,7 +19,8 @@ class AdminUsersController extends Controller
         $users =User::orderBy('id','ASC')->get();
         $clinics =Clinic::orderBy('id','ASC')->get();
         $staffs =Staff::orderBy('id','ASC')->get();
-        $data=['users'=>$users,'clinics'=>$clinics,'staffs'=>$staffs];
+        $categories=Category::orderBy('id','ASC')->get();
+        $data=['users'=>$users,'clinics'=>$clinics,'staffs'=>$staffs,'categories'=>$categories];
         return view('admin.users.index',$data);
     }
 
