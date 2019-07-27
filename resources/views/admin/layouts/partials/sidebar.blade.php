@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ route('admin.dashboard.index') }}">管理後台</a>
+        <a class="navbar-brand" href="{{ route('admin.dashboard.index') }}"><font face="微軟正黑體" style="color:#ffffff" size="5 px"><b>管理後台</b></font></a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -34,14 +34,14 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li class="active">
-                <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
+            <li>
+                <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i><font face="微軟正黑體" style="color:#ffffff" size="4 px"><b>主控台</b></font></a>
             </li>
             <li>
-                <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i> 文章管理</a>
+                <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i><font face="微軟正黑體" style="color:#ffffff" size="4 px"><b>文章管理</b></font></a>
             </li>
             <li>
-                <a href="{{ route('admin.users.index') }}"><i class="fa fa-fw fa-edit"></i> 使用者管理</a>
+                <a href="{{ route('admin.users.index') }}"><i class="fa fa-fw fa-edit"></i><font face="微軟正黑體" style="color:#ffffff" size="4 px"><b>使用者管理</b></font></a>
             </li>
         </ul>
     </div>
