@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Category;
 use App\Clinic;
 use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
@@ -26,7 +27,8 @@ class AdminUsersController extends Controller
     protected function create()
     {
         $clinics =Clinic::orderBy('id','DESC')->get();
-        $data=['clinics'=>$clinics];
+        $categories=Category::orderBy('id','ASC')->get();
+        $data=['clinics'=>$clinics,'categories'=>$categories];
         return view('admin.users.create',$data);
     }
 
@@ -42,6 +44,7 @@ class AdminUsersController extends Controller
     public function store(Request $request)
     {
         Clinic::create([
+            'category_id' => $request->clinic_category,
             'name' => $request->clinic_name,
         ]);
        $max_clinic=Clinic::orderBy('id','DESC')->get()->first();

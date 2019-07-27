@@ -37,6 +37,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label>診所科別：</label>
+                   <select name="clinic_category" required="" autofocus>
+                            <option value="">請選擇診所科別</option>
+                            @foreach($categories as $category)
+                            <option value={{$category->id}}>{{$category->category}}</option>
+                            @endforeach
+                   </select>
+                </div>
+
+                <div class="form-group">
                     <label>診所管理員姓名：</label>
                     <input name="clinic_admin" class="form-control" placeholder="請輸入診所管理員姓名" required>
                 </div>

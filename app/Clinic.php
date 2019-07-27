@@ -8,7 +8,7 @@ class Clinic extends Model
 {
     protected $table = 'clinics';
     protected $fillable = [
-        'name'
+        'name', 'category_id'
     ];
     public function staff()
     {
